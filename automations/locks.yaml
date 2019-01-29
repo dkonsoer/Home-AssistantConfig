@@ -15,4 +15,7 @@
   action:
     - service: notify.email
       data_template:
-        message: "\U0001F513 Bluetooth Unlock"
+        message: "\U0001F513 Front Door Unlocked via Chris iPhone"
+    - service: lock.unlock
+      data:
+        entity_id: lock.kwikset_touchpad_electronic_deadbolt_locked
