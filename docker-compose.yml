@@ -2,6 +2,18 @@ version: '3.7'
 
 services:
 
+  portainer:
+	    image: portainer/portainer
+	    container_name: portainer
+	    restart: always
+	    command: -H unix:///var/run/docker.sock --ssl --sslcert /shared/fullchain.crt --sslkey /shared/fuzzyblender.key
+	    volumes:
+	      - /var/run/docker.sock:/var/run/docker.sock
+	      - ${USERDIR}/portainer/data:/data
+        - /mnt/synology/shared:/shared
+	    environment:
+	      TZ: ${TZ}
+
   # Database for HA
   postgres:
     container_name: postgres
