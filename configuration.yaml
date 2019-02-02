@@ -109,7 +109,7 @@ notify: !include notify.yaml
 #-------------------------------------------
 # Include groups
 #-------------------------------------------
-group: !include_dir_merge_named groups
+group: !include groups.yaml
 
 #-------------------------------------------
 # Include automations
