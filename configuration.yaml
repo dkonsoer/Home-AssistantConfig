@@ -9,11 +9,6 @@ homeassistant:
   customize: !include customize.yaml
 
 #-------------------------------------------
-# Shell Commands
-#-------------------------------------------
-shell_command: !include shell_commands.yaml
-
-#-------------------------------------------
 # Enable InfluxDB
 #-------------------------------------------
 influxdb:
